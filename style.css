@@ -51,9 +51,23 @@ button{
     border: none;
     border-radius: 5px;
     font-size: large;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 button:hover {
     background-color: #333;
     cursor: pointer;
+}
+
+button::after {
+    content:  '';
+    display: block;
+    width: 109%;
+    height: 102%;
+    background-color: red;
+    position: absolute;
+    z-index: -1;
 }
 
